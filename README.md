@@ -1,2 +1,2 @@
 # scarlet
-Project Scarlet
+Project Scarlet.
