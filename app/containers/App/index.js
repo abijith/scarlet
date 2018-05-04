@@ -17,6 +17,7 @@ import MainPage from 'containers/MainPage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
+import Bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
 
 const AppWrapper = styled.div`
   max-width: calc(768px + 16px * 2);

@@ -37,7 +37,7 @@ export class MainPage extends React.Component { // eslint-disable-line react/pre
           <title>MainPage</title>
           <meta name="description" content="Description of MainPage" />
         </Helmet>
-        <Input type="text" className="text" />
+        <Input type="text" className="form-control" />
         <FormattedMessage {...messages.header} />
       </div>
     );
