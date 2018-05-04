@@ -18,10 +18,11 @@ import makeSelectMainPage from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 import messages from './messages';
+import Input from 'components/input'
 
 export class MainPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
-  constructor(prop) {
+  constructor(props) {
     super(props);
       this.state = {
         messages : "This is a new message",
@@ -36,6 +37,7 @@ export class MainPage extends React.Component { // eslint-disable-line react/pre
           <title>MainPage</title>
           <meta name="description" content="Description of MainPage" />
         </Helmet>
+        <Input type="text" className="text" />
         <FormattedMessage {...messages.header} />
       </div>
     );
