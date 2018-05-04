@@ -36,6 +36,7 @@ export default function App() {
         defaultTitle="React.js Boilerplate"
       >
         <meta name="description" content="A React.js Boilerplate application" />
+        
       </Helmet>
       <Header />
       <Switch>

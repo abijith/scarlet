@@ -27,44 +27,36 @@ export class MainPage extends React.Component { // eslint-disable-line react/pre
       this.state = {
         messages : "This is a new message",
         showMessage: false,
+        movieData : {}
       }
   }
 
+  componentDidMount() {
+    const url = 'https://api.themoviedb.org/4/list/1?page=1&api_key=6812091acb7ce137ce0fe8e8e8fae336';
+    this.setState({
+      movieData : {}
+    })
+  }
+
   render() {
+    var rows = [];
+    for (var i = 0; i < 5; i++) {
+        rows.push(<li> key={i}</li>);
+    }
     return (
       <div>
         <Helmet>
           <title>MainPage</title>
-          <meta name="description" content="Description of MainPage" />
+          {/* <meta name="description" content="Description of MainPage" /> */}
         </Helmet>
         <Input type="text" className="form-control" />
-        <FormattedMessage {...messages.header} />
+        {rows}
+        {/* <FormattedMessage {...messages.header} /> */}
       </div>
     );
   }
 }
 
-// componentWillMount() {
-//   console.log('Component WILL MOUNT!')
-// }
-// componentDidMount() {
-//   console.log('Component DID MOUNT!');
-// }
-// componentWillReceiveProps(newProps) {    
-//   console.log('Component WILL RECIEVE PROPS!');
-// }
-// shouldComponentUpdate(newProps, newState) {
-//   return true;
-// }
-// componentWillUpdate(nextProps, nextState) {
-//   console.log('Component WILL UPDATE!');
-// }
-// componentDidUpdate(prevProps, prevState) {
-//   console.log('Component DID UPDATE!');
-// }
-// componentWillUnmount() {
-//   console.log('Component WILL UNMOUNT!');
-// }
 
 MainPage.propTypes = {
   dispatch: PropTypes.func.isRequired,
