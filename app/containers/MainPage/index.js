@@ -20,6 +20,15 @@ import saga from './saga';
 import messages from './messages';
 
 export class MainPage extends React.Component { // eslint-disable-line react/prefer-stateless-function
+
+  constructor(prop) {
+    super(props);
+      this.state = {
+        messages : "This is a new message",
+        showMessage: false,
+      }
+  }
+
   render() {
     return (
       <div>
@@ -32,6 +41,28 @@ export class MainPage extends React.Component { // eslint-disable-line react/pre
     );
   }
 }
+
+// componentWillMount() {
+//   console.log('Component WILL MOUNT!')
+// }
+// componentDidMount() {
+//   console.log('Component DID MOUNT!');
+// }
+// componentWillReceiveProps(newProps) {    
+//   console.log('Component WILL RECIEVE PROPS!');
+// }
+// shouldComponentUpdate(newProps, newState) {
+//   return true;
+// }
+// componentWillUpdate(nextProps, nextState) {
+//   console.log('Component WILL UPDATE!');
+// }
+// componentDidUpdate(prevProps, prevState) {
+//   console.log('Component DID UPDATE!');
+// }
+// componentWillUnmount() {
+//   console.log('Component WILL UNMOUNT!');
+// }
 
 MainPage.propTypes = {
   dispatch: PropTypes.func.isRequired,
